@@ -32,7 +32,6 @@ public class Gun : MonoBehaviour
             scale.y = Mathf.Abs(scale.y);
 
         transform.localScale = scale;
-        Debug.Log("AA");
     }
 
     private void Shoot()
