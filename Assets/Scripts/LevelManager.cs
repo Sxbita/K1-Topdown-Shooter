@@ -12,7 +12,7 @@ public class LevelManager : MonoBehaviour {
     public int coinCount = 0;
     public TextMeshProUGUI coinText;
 
-    public GameObject winPanel;          // drag WinPanel here
+    public GameObject winPanel;        
 
     private int coinsRemaining;
     private bool levelComplete;
@@ -22,7 +22,7 @@ public class LevelManager : MonoBehaviour {
     }
 
     private void Start() {
-        // Make sure the game isn't paused if we just reloaded
+     
         Time.timeScale = 1f;
 
         coinsRemaining = FindObjectsOfType<Coin>().Length;
@@ -55,11 +55,11 @@ public class LevelManager : MonoBehaviour {
         Debug.Log("All coins collected — level complete!");
 
         if (winPanel != null) winPanel.SetActive(true);
-        Time.timeScale = 0f;   // pause the game
+        Time.timeScale = 0f; 
     }
 
     public void Retry() {
-        Time.timeScale = 1f;   // unpause BEFORE reloading
+        Time.timeScale = 1f; 
         SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
     }
 
